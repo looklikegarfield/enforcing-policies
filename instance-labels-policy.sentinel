@@ -2,11 +2,11 @@ import "tfplan-functions" as plan
 
 mandatory_labels = ["env", "terraform"]
 
-allInstances = plan.find_resources("google_compute_instance")
+allGCEInstances = plan.find_resources("google_compute_instance")
 
-violatingInstances = plan.filter_attribute_not_contains_list(allInstances,
+violatingInstances = plan.filter_attribute_not_contains_list(allGCEInstances,
 	"labels", mandatory_labels, true)
 
 main = rule {
-	length(violatingInstances["messages"]) is 0
+	length(violatingGCEInstances["messages"]) is 0
 }
