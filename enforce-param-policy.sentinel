@@ -1,0 +1,26 @@
+import "tfplan-functions" as plan
+param resource
+
+if resource in ["compute", "compute_engine", "google_compute_engine"] {
+	a = "google_compute_engine"
+}
+
+if resource in ["bucket", "storage_bucket", "google_storage_bucket"] {
+
+	a = "google_storage_bucket"
+}
+
+print(a)
+
+# mandatory labels
+mandatory_labels = ["env", "terraform"]
+
+allInstances = plan.find_resources(a)
+
+violatingInstances = plan.filter_attribute_not_contains_list(allInstances,
+	"labels", mandatory_labels, true)
+
+# Main rule
+main = rule {
+	length(violatingInstances["messages"]) is 0
+}
