@@ -4,7 +4,7 @@ resource "google_dataproc_cluster" "mycluster" {
   #graceful_decommission_timeout = "120s"
   labels = {
     terraform = "true"
-	env       = "tst"
+    env       = "tst"
   }
 
   cluster_config {

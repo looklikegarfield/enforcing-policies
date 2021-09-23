@@ -10,11 +10,11 @@ resource "google_compute_instance" "default" {
       image = "debian-cloud/debian-9"
     }
   }
-  
-  labels =  {
 
-  env = "tst"
-  terraform = "true"
+  labels = {
+
+    env       = "tst"
+    terraform = "true"
 
   }
 
