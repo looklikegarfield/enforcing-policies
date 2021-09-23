@@ -3,7 +3,8 @@ resource "google_dataproc_cluster" "mycluster" {
   region = "us-central1"
   #graceful_decommission_timeout = "120s"
   labels = {
-    foo = "bar"
+    terraform = "true"
+	env       = "tst"
   }
 
   cluster_config {

@@ -1,0 +1,12 @@
+import "tfplan-functions" as plan
+
+mandatory_labels = ["terraform", "env"]
+
+alldataprocInstances = plan.find_resources("google_dataproc_cluster")
+
+violatingInstances = plan.filter_attribute_not_contains_list(alldataprocInstances,
+	"labels", mandatory_labels, true)
+
+main = rule {
+	length(violatingInstances["messages"]) is 0
+}

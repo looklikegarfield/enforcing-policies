@@ -1,0 +1,12 @@
+import "tfplan-functions" as plan
+
+mandatory_labels = ["env", "foo"]
+
+allInstances = plan.find_resources("google_compute_instance")
+
+violatingInstances = plan.filter_attribute_not_contains_list(allInstances,
+	"labels", mandatory_labels, true)
+
+main = rule {
+	length(violatingInstances["messages"]) is 0
+}
