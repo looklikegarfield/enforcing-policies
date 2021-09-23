@@ -29,12 +29,15 @@ planned_values = {
 						"mode": "READ_WRITE",
 					},
 				],
-				"can_ip_forward":          false,
-				"deletion_protection":     false,
-				"description":             null,
-				"enable_display":          null,
-				"hostname":                null,
-				"labels":                  null,
+				"can_ip_forward":      false,
+				"deletion_protection": false,
+				"description":         null,
+				"enable_display":      null,
+				"hostname":            null,
+				"labels": {
+					"env":       "tst",
+					"terraform": "true",
+				},
 				"machine_type":            "e2-medium",
 				"metadata":                null,
 				"metadata_startup_script": null,
@@ -125,7 +128,8 @@ planned_values = {
 					},
 				],
 				"labels": {
-					"foo": "bar",
+					"env":       "tst",
+					"terraform": "true",
 				},
 				"name":     "mycluster",
 				"region":   "us-central1",
@@ -220,12 +224,15 @@ resource_changes = {
 						"mode": "READ_WRITE",
 					},
 				],
-				"can_ip_forward":          false,
-				"deletion_protection":     false,
-				"description":             null,
-				"enable_display":          null,
-				"hostname":                null,
-				"labels":                  null,
+				"can_ip_forward":      false,
+				"deletion_protection": false,
+				"description":         null,
+				"enable_display":      null,
+				"hostname":            null,
+				"labels": {
+					"env":       "tst",
+					"terraform": "true",
+				},
 				"machine_type":            "e2-medium",
 				"metadata":                null,
 				"metadata_startup_script": null,
@@ -273,6 +280,7 @@ resource_changes = {
 				"id":                   true,
 				"instance_id":          true,
 				"label_fingerprint":    true,
+				"labels":               {},
 				"metadata_fingerprint": true,
 				"min_cpu_platform":     true,
 				"network_interface": [
@@ -371,7 +379,8 @@ resource_changes = {
 					},
 				],
 				"labels": {
-					"foo": "bar",
+					"env":       "tst",
+					"terraform": "true",
 				},
 				"name":     "mycluster",
 				"region":   "us-central1",
@@ -560,6 +569,12 @@ raw = {
 								],
 							},
 						],
+						"labels": {
+							"constant_value": {
+								"env":       "tst",
+								"terraform": "true",
+							},
+						},
 						"machine_type": {
 							"constant_value": "e2-medium",
 						},
@@ -666,7 +681,8 @@ raw = {
 						],
 						"labels": {
 							"constant_value": {
-								"foo": "bar",
+								"env":       "tst",
+								"terraform": "true",
 							},
 						},
 						"name": {
@@ -762,6 +778,7 @@ raw = {
 							},
 						],
 						"guest_accelerator": [],
+						"labels":            {},
 						"network_interface": [
 							{
 								"access_config": [
@@ -795,12 +812,15 @@ raw = {
 								"mode": "READ_WRITE",
 							},
 						],
-						"can_ip_forward":          false,
-						"deletion_protection":     false,
-						"description":             null,
-						"enable_display":          null,
-						"hostname":                null,
-						"labels":                  null,
+						"can_ip_forward":      false,
+						"deletion_protection": false,
+						"description":         null,
+						"enable_display":      null,
+						"hostname":            null,
+						"labels": {
+							"env":       "tst",
+							"terraform": "true",
+						},
 						"machine_type":            "e2-medium",
 						"metadata":                null,
 						"metadata_startup_script": null,
@@ -929,7 +949,8 @@ raw = {
 							},
 						],
 						"labels": {
-							"foo": "bar",
+							"env":       "tst",
+							"terraform": "true",
 						},
 						"name":     "mycluster",
 						"region":   "us-central1",
@@ -1026,12 +1047,15 @@ raw = {
 							"mode": "READ_WRITE",
 						},
 					],
-					"can_ip_forward":          false,
-					"deletion_protection":     false,
-					"description":             null,
-					"enable_display":          null,
-					"hostname":                null,
-					"labels":                  null,
+					"can_ip_forward":      false,
+					"deletion_protection": false,
+					"description":         null,
+					"enable_display":      null,
+					"hostname":            null,
+					"labels": {
+						"env":       "tst",
+						"terraform": "true",
+					},
 					"machine_type":            "e2-medium",
 					"metadata":                null,
 					"metadata_startup_script": null,
@@ -1070,6 +1094,7 @@ raw = {
 						},
 					],
 					"guest_accelerator": [],
+					"labels":            {},
 					"network_interface": [
 						{
 							"access_config": [
@@ -1109,6 +1134,7 @@ raw = {
 					"id":                   true,
 					"instance_id":          true,
 					"label_fingerprint":    true,
+					"labels":               {},
 					"metadata_fingerprint": true,
 					"min_cpu_platform":     true,
 					"network_interface": [
@@ -1205,7 +1231,8 @@ raw = {
 						},
 					],
 					"labels": {
-						"foo": "bar",
+						"env":       "tst",
+						"terraform": "true",
 					},
 					"name":     "mycluster",
 					"region":   "us-central1",
