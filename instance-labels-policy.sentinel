@@ -1,6 +1,6 @@
 import "tfplan-functions" as plan
 
-mandatory_labels = ["env", "foo"]
+mandatory_labels = ["env", "terraform"]
 
 allInstances = plan.find_resources("google_compute_instance")
 

@@ -10,6 +10,13 @@ resource "google_compute_instance" "default" {
       image = "debian-cloud/debian-9"
     }
   }
+  
+  labels =  {
+
+  env = "tst"
+  terraform = "true"
+
+  }
 
   network_interface {
     network = "default"
